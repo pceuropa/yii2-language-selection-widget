@@ -1,9 +1,9 @@
 <?php
-namespace pceuropa\languageSelection\LanguageSelection;
+namespace pceuropa\languageSelection;
 
 use Yii;
 use yii\helpers\Html;
-use pceuropa\language-selection\LanguageAsset;
+use pceuropa\languageSelection\LanguageAsset;
 
 class LanguageSelection extends \yii\base\Widget {
 
