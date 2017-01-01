@@ -1,5 +1,5 @@
 <?php
-namespace pceuropa\language-selection\LanguageSelection;
+namespace pceuropa\languageSelection\LanguageSelection;
 
 use Yii;
 use yii\helpers\Html;

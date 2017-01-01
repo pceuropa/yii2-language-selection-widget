@@ -22,7 +22,7 @@
 	],
 	"autoload": {
 		"psr-4": {
-		  "pceuropa\\language-selection\\": ""
+		  "pceuropa\\languageSelection\\": ""
 		}
 	}
 }
