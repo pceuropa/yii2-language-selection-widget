@@ -1,0 +1,28 @@
+{
+	"name": "pceuropa/yii2-language-selection-widget",
+	"description": "Menu dropdown to select languages",
+	"keywords": [
+		"yii2",
+		"extension",
+		"dropmenu",
+		"flag icons",
+		"bootstrap menu"
+	],
+	"version": "1.0.0",
+	"homepage": "https://github.com/pceuropa/yii2-language-selection-widget.git",
+	"type": "yii2-extension",
+	"license": "MIT",
+	"minimum-stability": "dev",
+	"authors": [
+		{
+		  "name": "Rafal Marguzewicz",
+		  "email": "info@pceuropa.net",
+		  "homepage": "https://pceuropa.net/"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+		  "pceuropa\\language-selection\\": ""
+		}
+	}
+}
