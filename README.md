@@ -1,12 +1,11 @@
 # yii2-language-selection-widget
 Menu dropdown to select languages
-
+[Demo](https://pceuropa.net/yii2-extensions/yii2-language-selection-widget)
 
 ## Installation
 ```
 composer require pceuropa/yii2-language-selection-widget dev-master
 ```
-
 ## Configure
 
 ```
@@ -19,3 +18,6 @@ use pceuropa\languageSelection\LanguageSelection;
 	'classContainer' =>  'dropdown-toggle' // btn btn-default dropdown-toggle
 ]) ?>
 ```
+
+
+
