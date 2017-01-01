@@ -6,10 +6,13 @@ use yii\helpers\Html;
 use pceuropa\languageSelection\LanguageAsset;
 
 class LanguageSelection extends \yii\base\Widget {
-
+	
+	public $container = 'li'; // li for navbar, div for sidebar or footer example
+	public $classContainer = 'dropdown-toggle'; // btn btn-default dropdown-toggle
 	public $language;
-	public $url;
 	public $languageParam;
+	public $url;
+    
 
 	public function init(){
 		parent::init();
@@ -18,8 +21,9 @@ class LanguageSelection extends \yii\base\Widget {
         }
         
         if ($this->languageParam === null) {
-            $this->languageParam = ['language'];
+            $this->languageParam = 'language';
         }
+        
         
         LanguageAsset::register($this->view);
         $this->url = $this->view->assetBundles[LanguageAsset::className()]->baseUrl;
@@ -50,6 +54,8 @@ class LanguageSelection extends \yii\base\Widget {
 	public function widgetRender(){
 
 		return $this->render('language-selection', [
+			'container' => $this->container,
+			'classContainer' => $this->classContainer,
 			'flags' => [
 				'now' => $this->patchFlag(Yii::$app->language),
 				'all' => $this->allFlag(),
