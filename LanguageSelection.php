@@ -43,7 +43,7 @@ class LanguageSelection extends \yii\base\Widget {
 		foreach ($this->language as $key => $value) {
 			if (Yii::$app->language != $value){
 				$img = Html::img( $this->patchFlag($value));
-				$a = Html::a ($img ,  ['', $this->languageParam => $value] );
+				$a = Html::a ($img ,  ['', $this->languageParam => $key] );
 				$items .= Html::tag('li',$a );
 			}
 		}
@@ -57,7 +57,7 @@ class LanguageSelection extends \yii\base\Widget {
 			'container' => $this->container,
 			'classContainer' => $this->classContainer,
 			'flags' => [
-				'now' => $this->patchFlag(Yii::$app->language),
+				'now' => $this->patchFlag(strtolower (substr(Yii::$app->language, -2, 2)) ),
 				'all' => $this->allFlag(),
 			]
 		]);
