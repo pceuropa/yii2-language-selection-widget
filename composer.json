@@ -8,7 +8,6 @@
 		"flag icons",
 		"bootstrap menu"
 	],
-	"version": "1.0.0",
 	"homepage": "https://github.com/pceuropa/yii2-language-selection-widget.git",
 	"type": "yii2-extension",
 	"license": "MIT",
