@@ -2,7 +2,7 @@
 namespace pceuropa\languageSelection;
 
 use Yii;
-use yii\helpers\Html;
+use yii\helpers\{Html, Url};
 use pceuropa\languageSelection\LanguageAsset;
 
 class LanguageSelection extends \yii\base\Widget {
@@ -39,15 +39,14 @@ class LanguageSelection extends \yii\base\Widget {
 	
 	public function allFlag(){
 		$items = '';
-		
 		foreach ($this->language as $key => $value) {
 			if (Yii::$app->language != $value){
 				$img = Html::img( $this->patchFlag($value));
-				$a = Html::a ($img ,  ['', $this->languageParam => $key] );
+				$a = Html::a($img,  Url::current([$this->languageParam => $key]));
 				$items .= Html::tag('li',$a );
 			}
 		}
-		
+
 		return $items; 
 	}
 	
